@@ -86,6 +86,8 @@ class ProjectListView(LoginRequiredMixin, CreateView):
     def get_context_data(self, **kwargs):
         # kwargs['projects'] = Project.objects.exclude(todos__completed_tasks=True)
         kwargs['projects'] = Project.objects.all()
+        kwargs['page_title'] = 'Page - Dashboard'
+
         kwargs['project_todos'] = Project.objects.exclude(todos__completed_tasks=True)
         # print(request.GET)
         return super().get_context_data(**kwargs)

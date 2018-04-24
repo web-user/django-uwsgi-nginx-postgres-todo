@@ -1,6 +1,9 @@
 jQuery(document).ready(function ($) {
 
     $(document).ready(function () {
+
+    console.log('fff bbb')
+
         var max_fields = 10; //maximum input boxes allowed
         var wrapper = $(".input_fields_wrap"); //Fields wrapper
         var wrapper_project = $(".input_fields_wrap_project"); //Fields wrapper
