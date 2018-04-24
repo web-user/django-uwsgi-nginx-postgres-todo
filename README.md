@@ -1,4 +1,4 @@
-# django-docker
+# django-uwsgi-nginx-postgres-todo
 A complete example for deploying Django project with Nginx and postgres on Docker.
 ## QuickStart
 Install Docker Engine from the tutorial <https://docs.docker.com/engine/installation/>.</br>
