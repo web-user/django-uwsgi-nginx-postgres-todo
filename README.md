@@ -11,7 +11,7 @@ Run docker-compose commands to start containers:
 ```bash
 $ docker-compose up -d
 ```
-Now you can access the application at <http://localhost> or <http://192.168.99.100>(Docker Toolbox).</br>
+Now you can access the application at <http://localhost> or <http://ip docker>(Docker Toolbox) sudo docker inspect $(sudo docker ps -q) | grep IPA.</br>
 ## Django Admin
 If you want to access django admin site, please apply the django default migrations to database:
 ```bash
