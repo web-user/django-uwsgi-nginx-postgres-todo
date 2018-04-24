@@ -1,0 +1,11 @@
+appdirs
+Django
+djangorestframework
+packaging
+pyparsing
+pytz
+six
+psycopg2
+django-filter
+psycopg2-binary
+gunicorn

@@ -1,0 +1,98 @@
+{% extends "todo/base.html" %}
+
+{% block content %}
+
+
+
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+
+        <div class="edit-menu-wrap col-md-12" clear>
+            <!--Sidebar-->
+            {% include "todo/sidebar.html" %}
+
+            <!--Todo list-->
+            {% include "todo/todo_list.html" %}
+        </div>
+
+
+        <div class="editor-wrapper">
+            <div id="editor"></div>
+        </div>
+
+        <div class="modals-overlay"></div>
+        <div class="cm-model-wrapper">
+            <div class="cm-project-modal" modal-data="add-website">
+
+                <form enctype="multipart/form-data" class="add-project" id="form_project" method="post" action="{% url 'todo:project_create' %}">
+                    {% csrf_token %}
+                    <div class="cm-project-modal-header">
+                        <label>Create New Project</label>
+                    </div>
+                    <div class="cm-project-setting-inner-wrapper">
+                      <div class="color-field">
+                           <input type="color" id="favcolor" name="color" value="" />
+                           <input class="field-show project-title" type="text" name="title"/>
+
+
+                          <div class="color-block">
+                              <a class="paper-button ripple">&nbsp;</a>
+                            <div class="translate">
+                              <div class="color-picker" data-value="#2196F3">
+                                <div class="red"></div>
+                                <div class="blue"></div>
+                                <div class="green"></div>
+                                <div class="indigo"></div>
+                                <div class="brown"></div>
+                                <div class="black"></div>
+                                <div class="teal"></div>
+                                <div class="deep-orange"></div>
+                                <div class="light-blue"></div>
+                                <div class="light-green"></div>
+                                <div class="deep-purple"></div>
+                                <div class="amber"></div>
+                                <div class="blue-gray"></div>
+                                <div class="pink"></div>
+                                <div class="orange"></div>
+                                <div class="cyan"></div>
+                                <div class="lime"></div>
+                                <div class="purple"></div>
+                                <div class="yellow"></div>
+                                <div class="gray"></div>
+                                <div class="white"></div>
+                                <div class="transparent"></div>
+                                <input type="color" id="colorinput">
+                                <span class="hex">
+                                  <input type="text" id="text">
+                                  <div class="underline"></div>
+                                </span>
+                                <div id="close">
+                                  <i class="material-icons">close</i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </div>
+
+                    </div>
+                    <div class="cm-project-modal-footer">
+                        <div class="form-action-box">
+                            <button class="data-file-save btn-def button-add" model-close>Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+{% endblock %}
