@@ -1,5 +1,5 @@
 # django-docker
-A complete example for deploying Django project with Nginx and MySQL on Docker.
+A complete example for deploying Django project with Nginx and postgres on Docker.
 ## QuickStart
 Install Docker Engine from the tutorial <https://docs.docker.com/engine/installation/>.</br>
 Install Docker Compose from the tutorial <https://docs.docker.com/compose/install/>.</br>
