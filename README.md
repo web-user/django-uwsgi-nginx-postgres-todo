@@ -5,7 +5,7 @@ Install Docker Engine from the tutorial <https://docs.docker.com/engine/installa
 Install Docker Compose from the tutorial <https://docs.docker.com/compose/install/>.</br>
 Get the latest project clone to your computer:
 ```bash
-$ git clone git@github.com:huchenw/django-docker.git
+$ git clone https://github.com/web-user/django-uwsgi-nginx-postgres-todo.git
 ```
 Run docker-compose commands to start containers:
 ```bash
