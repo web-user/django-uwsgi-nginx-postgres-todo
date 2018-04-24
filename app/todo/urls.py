@@ -3,8 +3,11 @@ from django.contrib.auth.views import login
 from django.contrib.auth.views import logout
 from django.contrib.auth.views import logout_then_login
 from rest_framework.urlpatterns import format_suffix_patterns
+from django.conf.urls import handler404, handler500
 
 from . import views
+
+from . import views as todo_views
 
 urlpatterns = [
     path('dashboard/', views.ProjectListView.as_view(), name='home'),
@@ -32,5 +35,7 @@ urlpatterns = [
 ]
 
 app_name = 'todo'
+
+
 
 urlpatterns = format_suffix_patterns(urlpatterns)

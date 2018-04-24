@@ -27,6 +27,9 @@ $ python manage.py createsuperuser
 $ docker-compose run web python app/manage.py migrate
 ```
 
+docker-compose run web python app/manage.py collectstatic
+
+
 ## Celery Results
 Redis is used as broker for Celery <http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html>.</br>
 The official tutorial <http://docs.celeryproject.org/en/latest/django/> tells us how to use Celery with Django.</br>
@@ -38,8 +41,7 @@ $ docker-compose logs celery
 
 | Name   | Image                              |
 | ------ | ---------------------------------- |
-| Nginx  | <https://hub.docker.com/_/nginx/>  |
-| MySQL  | <https://hub.docker.com/_/mysql/>  |
+| Nginx  | <https://hub.docker.com/_/nginx/>  | |
 | Redis  | <https://hub.docker.com/_/redis/>  |
 | Python | <https://hub.docker.com/_/python/> |
 

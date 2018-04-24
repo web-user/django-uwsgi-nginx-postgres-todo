@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from . import views
+
+from todo import views as todo_views
 from django.conf import settings
 from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +28,9 @@ urlpatterns = [
     path('', views.index, name='home'),
 
 ]
+
+handler404 = todo_views.error_404
+handler500 = todo_views.error_500
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

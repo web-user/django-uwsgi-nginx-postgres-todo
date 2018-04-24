@@ -26,6 +26,9 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.contrib import messages
 
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
 import json
 
 
@@ -149,3 +152,18 @@ class TodoUpdate(UpdateView):
     model = Todo
     fields = ['title', 'completed_tasks', 'todo_priority']
     success_url = reverse_lazy('todo:home')
+
+
+
+def error_404(request):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def error_500(request):
+    response = render_to_response('todo/error_404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
